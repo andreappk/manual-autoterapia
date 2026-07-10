@@ -81,63 +81,72 @@
 
   /* ── HERO ── */
   .hero {
-    background: var(--creme);
-    padding: 72px 24px 64px;
+    background: var(--vinho);
+    padding: 80px 24px 72px;
     text-align: center;
-    border-bottom: 3px solid var(--coral-lt);
   }
   .hero h1 {
     font-family: var(--serif);
     font-size: clamp(36px, 6vw, 58px);
     font-weight: 500;
     line-height: 1.15;
-    color: var(--vinho);
+    color: var(--white);
     max-width: 640px;
     margin: 0 auto 24px;
   }
   .hero h1 em {
     font-style: italic;
-    color: var(--coral);
+    color: var(--coral-lt);
   }
   .hero-sub {
     font-size: 18px;
-    color: var(--muted);
+    color: rgba(255,255,255,0.7);
     max-width: 480px;
-    margin: 0 auto 48px;
+    margin: 0 auto 56px;
     line-height: 1.7;
   }
   .hero-imgs {
     display: flex;
-    gap: 24px;
-    align-items: center;
+    gap: 0;
+    align-items: flex-end;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
     flex-wrap: wrap;
   }
   .hero-capa {
-    width: 180px;
+    width: 160px;
     border-radius: 4px;
-    box-shadow: 0 12px 40px rgba(44,18,25,0.18);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+    transform: rotate(-4deg) translateX(20px);
+    position: relative;
+    z-index: 1;
   }
   .hero-mockup {
-    width: 320px;
+    width: 340px;
     border-radius: 4px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 2;
   }
   .hero-video-wrap {
     max-width: 360px;
     margin: 0 auto 12px;
     border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(44,18,25,0.12);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.1);
   }
   .hero-video-wrap video { width: 100%; display: block; }
   .hero-video-caption {
     font-size: 13px;
-    color: var(--muted);
+    color: rgba(255,255,255,0.45);
     font-style: italic;
     margin-bottom: 36px;
     text-align: center;
   }
+  .hero .btn { background: var(--coral); }
+  .hero .btn:hover { background: var(--coral-dk); }
+  .hero .btn-micro { color: rgba(255,255,255,0.45); }
 
   /* ── SECTIONS ── */
   section { padding: 80px 24px; }
@@ -478,7 +487,7 @@
 
 <!-- TOPBAR -->
 <div class="topbar">
-  Acesso imediato após o pagamento &nbsp;·&nbsp; <span>PDF de 40 páginas para baixar, imprimir ou usar no celular</span>
+  Um guia completo para libertar-se dos padrões emocionais que travam sua vida &nbsp;·&nbsp; <span>Acesso imediato · Garantia de 7 dias</span>
 </div>
 
 <!-- HERO -->
@@ -486,10 +495,7 @@
   <h1>Seja sua própria terapeuta e <em>liberte-se dos traumas</em> que atrapalham sua vida</h1>
   <p class="hero-sub">Um guia prático com 12 atividades terapêuticas para reconhecer seus padrões emocionais e reescrever sua história — no seu tempo, no seu ritmo.</p>
 
-  <div class="hero-imgs">
-    <img src="capa.png" alt="Capa do Manual de Autoterapia e Liberação Emocional" class="hero-capa">
-    <img src="mockup.png" alt="Manual de Autoterapia — Andréa Kaplunn" class="hero-mockup">
-  </div>
+  <img src="mockup.png" alt="Manual de Autoterapia — Andréa Kaplunn" style="width:100%; max-width:480px; display:block; margin:0 auto 40px; border-radius:6px; box-shadow:0 24px 64px rgba(0,0,0,0.45);">
 
   <div class="hero-video-wrap">
     <video autoplay muted loop playsinline>
@@ -523,7 +529,7 @@
 <section class="agitacao vinho">
   <div class="container text-center">
     <p class="frase-grande">O problema não é você não querer mudar.<br>O problema é que ninguém te mostrou de onde veio...</p>
-    <p>Enquanto você não entender a raiz, vai continuar interpretando o silêncio do outro como rejeição. Vai continuar se diminuindo antes que alguém faça isso por você. Vai continuar achando que amor vem com condição.</p>
+    <p>Enquanto você não entender a raiz, vai continuar interpretando o silêncio do outro como rejeição. Vai continuar diminuindo-se antes que alguém faça isso por você. Vai continuar achando que amor vem com condição.</p>
   </div>
 </section>
 
@@ -532,7 +538,7 @@
   <div class="container">
     <span class="section-label">A virada</span>
     <h2>Existe uma explicação para tudo isso. E mais importante: existe um caminho de volta.</h2>
-    <p>A ciência do comportamento humano mostra que a forma como fomos acolhidas na infância cria padrões que carregamos para a vida adulta. Esses padrões têm nome, têm características específicas. E quando você aprende a reconhecê-los em você mesma, algo muda.</p>
+    <p>A ciência do comportamento humano mostra que a forma como fomos acolhidas na infância cria padrões que carregamos para a vida adulta. Esses padrões têm nome, têm características específicas. E quando você aprende a reconhecê-los em si mesma, algo muda.</p>
     <p>Não de um dia para o outro, mas de verdade.</p>
     <p>É exatamente esse o trabalho que esse manual propõe — sem jargão, sem promessa de milagre. Com exercícios reais, que pedem que você sente, escreva, sinta e ressignifique.</p>
     <p><strong>É autoterapia de verdade.</strong></p>
@@ -542,15 +548,20 @@
 <!-- PRODUTO -->
 <section>
   <div class="container">
-    <span class="section-label">O que você recebe</span>
-    <h2>Manual de Autoterapia e Liberação Emocional</h2>
-    <p style="color:var(--muted)">PDF com 40 páginas · Andréa Kaplunn · acesso imediato</p>
+    <div style="display:flex; gap:32px; align-items:center; flex-wrap:wrap; margin-bottom:8px;">
+      <img src="capa.png" alt="Capa do Manual" style="width:120px; border-radius:4px; box-shadow:0 8px 28px rgba(44,18,25,0.18); flex-shrink:0;">
+      <div>
+        <span class="section-label">O que você recebe</span>
+        <h2 style="margin-bottom:8px;">Manual de Autoterapia e Liberação Emocional</h2>
+        <p style="color:var(--muted)">PDF com 40 páginas · Andréa Kaplunn · acesso imediato</p>
+      </div>
+    </div>
     <div class="produto-box">
       <div class="produto-item">
         <div class="produto-icon">📖</div>
         <div class="produto-item-text">
           <strong>Teoria do Apego explicada de forma clara</strong>
-          <span>Os 4 estilos de apego, como se formam e como aparecem no seu comportamento hoje — nos relacionamentos, no trabalho, com amigos e com você mesma.</span>
+          <span>Os 4 estilos de apego, como se formam e como aparecem no seu comportamento hoje — nos relacionamentos, no trabalho, com amigos e consigo mesma.</span>
         </div>
       </div>
       <div class="produto-item">
@@ -590,10 +601,10 @@
     <ul class="paraquem-list">
       <li>Sente que repete os mesmos padrões nos relacionamentos e não consegue sair desse ciclo.</li>
       <li>Precisa de aprovação constante para se sentir suficiente — no trabalho, no amor, nas amizades.</li>
-      <li>Tem dificuldade de confiar nas pessoas ou de se deixar ser amada de verdade.</li>
+      <li>Tem dificuldade de confiar nas pessoas ou de deixar-se ser amada de verdade.</li>
       <li>Carrega um cansaço emocional que você não sabe ao certo de onde vem.</li>
       <li>Sente que algo da infância ainda pesa, mas nunca parou para olhar de frente.</li>
-      <li>Quer se entender melhor e construir uma relação mais gentil consigo mesma.</li>
+      <li>Quer entender-se melhor e construir uma relação mais gentil consigo mesma.</li>
     </ul>
   </div>
 </section>
@@ -704,7 +715,7 @@
     <div class="garantia-box">
       <p class="garantia-num">7</p>
       <p class="garantia-dias">dias de garantia</p>
-      <p>Você tem 7 dias a partir da compra para testar o manual. Se por qualquer razão sentir que não era o que esperava, é só solicitar o reembolso direto pela plataforma.</p>
+      <p>Você tem 7 dias a partir da compra para testar o manual. Se por qualquer razão sentir que não era o que esperava, basta solicitar o reembolso diretamente pela plataforma.</p>
       <p style="margin-top:14px;"><strong>Sem perguntas. Sem julgamento.</strong></p>
       <p style="margin-top:12px; color:var(--muted); font-size:14px;">A única coisa que você arrisca é descobrir que era exatamente o que você precisava.</p>
     </div>
@@ -730,7 +741,7 @@
     </div>
     <div class="faq-item">
       <p class="faq-q">Quem é Andréa Kaplunn?</p>
-      <p class="faq-a">Andréa é Terapeuta Integrativa e Mentora de Mulheres desde 2018. Trabalha com mulheres que chegaram aos 50 anos e buscam redescobrir quem são e o que faz sentido para elas nesta fase da vida, combinando psicologia positiva, neurociência, Neurolinguística e terapias energéticas. Acompanhe: <a href="https://instagram.com/andreakaplunn" target="_blank" rel="noopener" style="color:var(--coral);">@andreakaplunn</a></p>
+      <p class="faq-a">Andréa é Terapeuta Integrativa e Mentora de Mulheres desde 2018. Trabalha com mulheres que chegaram aos 50 anos e buscam redescobrir quem são e o que faz sentido para elas nesta fase da vida, combinando psicologia positiva, neurociência, Neurolinguística e terapias energéticas. Acompanhe em: <a href="https://instagram.com/andreakaplunn" target="_blank" rel="noopener" style="color:var(--coral);">@andreakaplunn</a></p>
     </div>
     <div class="faq-item">
       <p class="faq-q">Como funciona a garantia?</p>
@@ -743,7 +754,7 @@
 <section class="cta-final">
   <div class="container">
     <h2>Você já carregou esse peso por tempo suficiente.</h2>
-    <p>O manual está aqui, esperando pelo momento em que você decidir que merece entender o que acontece dentro de você — e fazer algo diferente com isso.</p>
+    <p>O manual está aqui, esperando pelo momento em que você decidir que merece entender o que acontece dentro de si — e fazer algo diferente com isso.</p>
     <a href="https://chk.eduzz.com/6W48KG1N0Z" class="btn btn-lg">Quero o manual agora — R$&nbsp;27</a>
     <span class="btn-micro">Acesso imediato · garantia de 7 dias · compra segura</span>
   </div>
